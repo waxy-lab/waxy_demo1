@@ -1,0 +1,47 @@
+1、dafault-openeds 中填写需要打开的数组，可实现进入界面时自动开启子标签。
+   //官网解释     当前打开的 sub-menu 的 index 的数组
+2、添加标签时，可以通过class在element官网上直接进行复制。
+3、使用element组件时，可以通过修改Vue.use(ElementUI,{size: ''})，//medium small mini 来修改组件大         小。
+4、el分页默认每页十个。
+5、url: jdbc:mysql://localhost:3306/library-management?serverTimezone=GMT%2b8 北京时间
+6、【java: 警告: 源发行版 * 需要目标发行版 * 】错误: 无效的源发行版:17 maven和项目jdk版本不兼容，修改其中一个的jdk
+7、java: 无法访问org.springframework.boot.SpringApplication解决办法
+这个错误的原因是idea默认的spring-boot-starter-parent版本是3.0，改成2.7.6或者更低版本（可能出现的问题：与项目所使用的mybatis不兼容）
+8、JDBC连接数据库出现Loading class `com.mysql.jdbc.Driver‘. This is deprecated.问题的相关解决方法
+   5.x版本的驱动文件jar包对应的是：
+   (“com.mysql.jdbc.Driver”);语句来加载数据库驱动
+   8.x版本的驱动文件jar包对应的是：
+   (“com.mysql.cj.jdbc.Driver”);
+9、后端初始端口位9090可能与前端冲突，需手动在application进行修改
+10、@Data会自动在编译之后生成模板代码
+11、@Mapper和@Repository的区别
+    @Repository需要在Spring中配置扫描地址，然后生成Dao层的Bean才能被注入到Service层中。
+    @Mapper不需要配置扫描地址，通过xml里面的namespace里面的接口地址，生成了Bean后注入到Service层中。
+12、Autowired members must be defined in valid Spring bean (@Component|@Service|…)报错
+       在类前加入注解@Service等bean类
+       自动注入对象必须定义在有效的spring bean内，也就是说只有本身作为bean的类才能注入其他对象。
+13、ctrl+alt+b快捷键查找高亮所用方法根目录
+14、‘vue-cli-service‘ 不是内部或外部命令，也不是可运行的程序或批处理文件”的报错解决方案 
+    先卸载node_modules再在控制台运行npm install重新下载
+15、搭建后台服务跨域错误解决方案：后台接口上加入@CrossOrigin
+16、使用xml实现接口时出现Invalid bound statement (not found)，解决方案：
+    mybatis:
+    mapper-locations: classpath:mapper/*.xml 进行配置
+    扫描Mapper接口对应的XML文件，如所示：扫描的是resources下的mapper文件夹中所有的xml结尾的文件。
+17、axios插件安装失败的解决方案：用管理员权限打开cmd进行下载
+18、数据库开始事务时会上锁，无法实现数据实时更新
+19、 <dependency>
+               <groupId>com.github.pagehelper</groupId>
+               <artifactId>pagehelper-spring-boot-starter</artifactId>
+               <version>1.4.6</version>
+    </dependency>
+    要使用最新版本否则pageHelper会失效
+20、disabled 不可以被编辑
+21、trigger 触发时机 ， blur 失去焦点
+22、正则表达式：
+    年龄：
+    !/^[0-9]+$/.test(value)
+    手机号：
+    !/^[1][3,4,5,6,7,8,9][0-9]{9}$/.test(this.entity.phone)
+23、this.$refs['ruleForm'].resetFields() 可清空表单
+24、resetFields() 部分表单内容无法重置的可能原因：表单内内容没有添加prop属性
